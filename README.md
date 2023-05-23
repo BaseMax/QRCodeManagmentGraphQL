@@ -52,6 +52,21 @@ npm start
 
 The GraphQL API exposes the following schema and operations:
 
+### Retrieve QR Codes by Data:
+
+```graphql
+query {
+  getQRCodesByData(data: "Data to search for") {
+    id
+    slug
+    image
+    data
+  }
+}
+```
+
+This query retrieves all QR codes that match a specific data value. Provide the data to search for in the data field. The response includes the id, slug, image, and data of each matching QR code.
+
 ### Generate QR Code Image
 
 Mutation to generate a QR code image from the provided text:
