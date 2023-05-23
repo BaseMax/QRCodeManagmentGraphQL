@@ -128,6 +128,38 @@ query {
 
 This query converts a QR code image back to its data representation by providing the qrCodeId of the QR code.
 
+### Retrieve All QR Codes:
+
+```graphql
+query {
+  getAllQRCodes {
+    id
+    slug
+    image
+    data
+  }
+}
+```
+
+This query retrieves all QR codes stored in the system. The response includes the id, slug, image, and data of each QR code.
+
+### Retrieve QR Code by ID:
+
+```graphql
+query {
+  getQRCodeById(qrCodeId: "your-qrcode-id") {
+    id
+    slug
+    image
+    data
+  }
+}
+```
+
+This query retrieves a QR code by its qrCodeId. The response includes the id, slug, image, and data of the QR code.
+
+These additional routes provide functionality to convert text and binary data to QR code images and retrieve all QR codes or a specific QR code by its ID. Feel free to modify and adapt these routes.
+
 ### Mutations
 
 #### Generate QR Code Image:
