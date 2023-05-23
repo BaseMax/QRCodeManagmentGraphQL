@@ -154,6 +154,32 @@ mutation {
 
 This mutation saves a QR code image with a unique slug. Provide a slug and the text you want to encode in the QR code. The response includes the id, slug, and image of the saved QR code.
 
+#### Convert Text to QR Code Image:
+
+```graphql
+mutation {
+  convertTextToQRCode(text: "Your text here") {
+    id
+    image
+  }
+}
+```
+
+This mutation converts the provided text to a QR code image. The response includes the id (unique identifier) and image (base64-encoded image representation) of the generated QR code.
+
+#### Convert Binary to QR Code Image:
+
+```graphql
+mutation {
+  convertBinaryToQRCode(binaryData: "Your binary data here") {
+    id
+    image
+  }
+}
+```
+
+This mutation converts the provided binary data to a QR code image. The response includes the id (unique identifier) and image (base64-encoded image representation) of the generated QR code.
+
 ## Contributing
 
 Contributions are welcome! If you encounter any issues or have suggestions for improvements, please open an issue or submit a pull request.
