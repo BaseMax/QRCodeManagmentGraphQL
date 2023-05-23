@@ -20,8 +20,6 @@ QRCodeManagementGraphQL is a GraphQL-based project that allows you to generate Q
 ```
 git clone https://github.com/BaseMax/QRCodeManagmentGraphQL.git
 ```
-css
-Copy code
 
 2. Navigate to the project directory:
 
@@ -113,6 +111,48 @@ query {
 ```
 
 Provide the slug of the QR code image you want to retrieve.
+
+### Convert QR Code Image to Data:
+
+```graphql
+query {
+  convertQRCodeToData(qrCodeId: "your-qrcode-id") {
+    id
+    data
+  }
+}
+```
+
+This query converts a QR code image back to its data representation by providing the qrCodeId of the QR code.
+
+### Mutations
+
+#### Generate QR Code Image:
+
+```graphql
+mutation {
+  generateQRCode(text: "Your text here") {
+    id
+    image
+  }
+}
+```
+
+This mutation generates a QR code image from the provided text. The response includes the id (unique identifier) and image (base64-encoded image representation) of the generated QR code.
+
+#### Save QR Code with Slug:
+
+```graphql
+mutation {
+  saveQRCodeWithSlug(slug: "your-slug", text: "Your text here") {
+    id
+    slug
+    image
+  }
+}
+```
+
+This mutation saves a QR code image with a unique slug. Provide a slug and the text you want to encode in the QR code. The response includes the id, slug, and image of the saved QR code.
 
 ## Contributing
 
