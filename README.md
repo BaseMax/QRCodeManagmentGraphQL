@@ -4,6 +4,9 @@ QRCodeManagementGraphQL is a GraphQL-based project that allows you to generate Q
 
 ## Features
 
+- Get list of all QR Codes
+- Search list of QR Codes
+- Get a QR Code from ID, slug
 - Generate QR code images from text or binary data
 - Convert QR code images back to data
 - Save QR codes with unique slugs for easy retrieval
