@@ -1,0 +1,21 @@
+type QRCode {
+  id: String!
+  slug: String!
+  image: String!
+  data: String!
+}
+
+type Query {
+  getAllQRCodes: [QRCode!]!
+  getQRCodeById(qrCodeId: String!): QRCode!
+  getQRCodeBySlug(slug: String!): QRCode!
+  getQRCodesByData(data: String!): [QRCode!]!
+}
+
+type Mutation {
+  generateQRCode(text: String!): QRCode!
+  saveQRCodeWithSlug(slug: String!, text: String!): QRCode!
+  convertQRCodeToData(qrCodeId: String!): QRCode! 
+  convertTextToQRCode(text: String!): QRCode!
+  convertBinaryToQRCode(binaryData: String!): QRCode!
+}
