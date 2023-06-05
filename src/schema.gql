@@ -1,0 +1,25 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type QRCode {
+  id: ID!
+  slug: String!
+  image: String!
+  data: String!
+}
+
+type Query {
+  getQRCodesByData(data: String!): [QRCode!]!
+  convertQRCodeToData(qrCodeId: String!): QRCode!
+  getQRCodeBySlug(slug: String!): QRCode!
+  getAllQRCodes: [QRCode!]!
+  getQRCodeById(qrCodeId: String!): QRCode!
+}
+
+type Mutation {
+  generateQRCode(text: String!): QRCode!
+  saveQRCodeWithSlug(slug: String!, text: String!): QRCode!
+  convertTextToQRCode(text: String!): QRCode!
+  convertBinaryToQRCode(binaryData: String!): QRCode!
+}

@@ -4,7 +4,8 @@ import { GraphQLModule } from "@nestjs/graphql";
 import { ApolloServerPluginLandingPageLocalDefault } from "@apollo/server/plugin/landingPage/default";
 import { AppController } from "./app.controller";
 import { AppService } from "./app.service";
-import { QrCodeModule } from './qr-code/qr-code.module';
+import { QRCodeModule } from "./qrcode/qrcode.module";
+import { join } from "path";
 
 @Module({
   imports: [
@@ -12,9 +13,9 @@ import { QrCodeModule } from './qr-code/qr-code.module';
       driver: ApolloDriver,
       playground: false,
       plugins: [ApolloServerPluginLandingPageLocalDefault()],
-      typePaths: ["./**/*.graphql"],
+      autoSchemaFile: join(process.cwd(), "src/schema.gql"),
     }),
-    QrCodeModule,
+    QRCodeModule,
   ],
   controllers: [AppController],
   providers: [AppService],
