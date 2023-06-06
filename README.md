@@ -13,8 +13,8 @@ QRCodeManagementGraphQL is a GraphQL-based project that allows you to generate Q
 
 ## Prerequisites
 
-- Node.js (version X.X.X or higher)
-- NPM (version X.X.X or higher)
+- Node.js (version 18.12.1 or higher)
+- NPM (version 9.4.2 or higher)
 
 ## Installation
 
