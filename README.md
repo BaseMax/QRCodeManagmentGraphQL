@@ -44,7 +44,7 @@ npm install
 npm start
 ```
 
-2. Open your browser and navigate to `http://localhost:XXXX/`, where `XXXX` is the port number specified in the console output.
+2. Open your browser and navigate to `http://localhost:3000/`, where `3000` is the port number specified in the console output.
 
 3. Use a GraphQL client or tool of your choice (e.g., GraphiQL or GraphQL Playground) to interact with the GraphQL API.
 
