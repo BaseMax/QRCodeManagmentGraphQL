@@ -30,7 +30,7 @@
     "@nestjs/apollo": "^13.2.4",
     "@nestjs/common": "^11.1.17",
     "@nestjs/core": "^11.1.18",
-    "@nestjs/graphql": "^13.4.0",
+    "@nestjs/graphql": "^13.4.2",
     "@nestjs/mapped-types": "*",
     "@nestjs/platform-express": "^11.1.17",
     "@prisma/client": "^4.15.0",
